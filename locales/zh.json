@@ -1,0 +1,91 @@
+{
+    "logo": "JayTang",
+    "nav": {
+        "home": "首页",
+        "about": "关于",
+        "techstack": "技术栈",
+        "gallery": "相册",
+        "contact": "联系"
+    },
+    "hero": {
+        "title": "你好，我是Jay",
+        "subtitle": "欢迎来到我的空间",
+        "cta": "了解更多"
+    },
+    "about": {
+        "title": "关于我",
+        "description": "重庆大学2024级计算机科学与技术卓越班在读",
+        "experience": "重庆大学START时空实验室成员，单片机（STM32）小车开发经历，谷歌插件开发（ing）",
+        "technicalSkills": "C++，STM32 ，Linux，Git，WSL，PCB，Proteus",
+        "interests": "我喜欢探索未知的地带，去未至的地方，认识不同的人。",
+        "skills": {
+            "design": "开发",
+            "development": "骑行",
+            "photography": "音乐",
+            "writing": "探索"
+        }
+    },
+    "gallery": {
+        "title": "相册",
+        "placeholder": "图片"
+    },
+    "techstack": {
+        "title": "技术栈",
+        "embedded": {
+            "title": "嵌入式开发",
+            "stm32": "STM32",
+            "arduino": "Arduino",
+            "esp32": "ESP32",
+            "rtos": "Keil 5"
+        },
+        "hardware": {
+            "title": "硬件设计",
+            "pcb": "PCB设计",
+            "proteus": "Proteus",
+            "altium": "Altium Designer",
+            "kicad": "KiCad"
+        },
+        "software": {
+            "title": "软件与工具",
+            "cpp": "C++",
+            "python": "Python",
+            "linux": "Linux",
+            "git": "Git",
+            "wsl": "WSL",
+            "vscode": "VS Code"
+        }
+    },
+    "contact": {
+        "title": "联系我",
+        "email": "邮箱",
+        "location": "地址",
+        "locationValue": "中国，成都",
+        "socialLabel": "社交媒体",
+        "social": {
+            "github": "GitHub",
+            "xhs": "小红书",
+            "stackoverflow": "Stack Overflow"
+        },
+        "formTitle": "留言",
+        "submit": "发送",
+        "form": {
+            "namePlaceholder": "您的姓名",
+            "emailPlaceholder": "您的邮箱",
+            "messagePlaceholder": "您的留言"
+        }
+    },
+    "projects": {
+        "title": "个人项目",
+        "github": "GitHub",
+        "demo": "项目详情"
+    },
+    "footer": {
+        "copyright": "© 2024 JayTang | 个人主页. 保留所有权利."
+    },
+    "audio": {
+        "play": "播放音乐",
+        "pause": "暂停音乐",
+        "volume": "音量控制",
+        "autoplayFailed": "自动播放被阻止，请点击播放按钮"
+    }
+}

@@ -1,0 +1,80 @@
+body.dark-mode {
+    --bg-light: #1a1a2e;
+    --bg-dark: #ffffff;
+    --text-light: #e0e0e0;
+    --text-dark: #333333;
+    --card-light: #16213e;
+    --card-dark: #f8f9fa;
+    --border-light: #2a2a4a;
+    --border-dark: #e0e0e0;
+}
+
+body.dark-mode .header {
+    background: rgba(26, 26, 46, 0.95);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text-light);
+}
+
+body.dark-mode .lang-switch {
+    border-color: var(--border-light);
+    color: var(--text-light);
+}
+
+body.dark-mode .theme-toggle {
+    border-color: var(--border-light);
+    color: var(--text-light);
+}
+
+body.dark-mode .hero-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .hero-subtitle {
+    color: var(--text-light);
+}
+
+body.dark-mode .about-text p {
+    color: var(--text-light);
+}
+
+body.dark-mode .social-link {
+    background: var(--card-light);
+    color: var(--text-light);
+}
+
+body.dark-mode .contact-form {
+    background: var(--card-light);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: var(--bg-light);
+    color: var(--text-light);
+    border-color: var(--border-light);
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+body.dark-mode .techstack-category {
+    background: var(--card-light);
+}
+
+body.dark-mode .category-header {
+    border-bottom-color: var(--border-light);
+}
+
+body.dark-mode .tech-item {
+    background: var(--bg-light);
+    border-color: var(--border-light);
+}
+
+body.dark-mode .tech-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}

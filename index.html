@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人网站 - Personal Website">
+    <title>JayTang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span class="logo-text" data-i18n="logo">JayTang</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">首页</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">关于</a></li>
+                <li><a href="#techstack" class="nav-link" data-i18n="nav.techstack">技术栈</a></li>
+                <li><a href="#gallery" class="nav-link" data-i18n="nav.gallery">相册</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">联系</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-switch" id="langSwitch">EN</button>
+                <button class="theme-toggle" id="themeToggle">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-wrapper">
+                    <div class="profile-circle">
+                        <div class="halo-layer halo-1"></div>
+                        <div class="halo-layer halo-2"></div>
+                        <div class="halo-layer halo-3"></div>
+                        <img src="images/personal-image.jpg" alt="个人照片" loading="lazy">
+                    </div>
+                </div>
+                <h1 class="hero-title" data-i18n="hero.title">你好，我是Jay</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">欢迎来到我的空间</p>
+                <a href="#about" class="btn btn-primary" data-i18n="hero.cta">了解更多</a>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">关于我</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about.description">重庆大学2024级计算机科学与技术卓越班在读</p>
+                        <p data-i18n="about.experience">重庆大学START时空实验室成员，单片机（STM32）小车开发经历，谷歌插件开发（ing）</p>
+                        <p data-i18n="about.technicalSkills">C++，STM32 ，Linux，Git，WSL，PCB，Proteus</p>
+                       
+                    </div>
+                    <div class="about-skills">
+                        <div class="skill-tag" data-i18n="about.skills.design">开发</div>
+                        <div class="skill-tag" data-i18n="about.skills.development">骑行</div>
+                        <div class="skill-tag" data-i18n="about.skills.photography">音乐</div>
+                        <div class="skill-tag" data-i18n="about.skills.writing">探索</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">个人项目</h2>
+                <div class="projects-grid" id="projectsGrid">
+                </div>
+            </div>
+        </section>
+
+        <section id="techstack" class="techstack">
+            <div class="container">
+                <h2 class="section-title" data-i18n="techstack.title">技术栈</h2>
+                <div class="techstack-content">
+                    <div class="techstack-category">
+                        <div class="category-header">
+                            <div class="category-icon">⚙️</div>
+                            <h3 class="category-title" data-i18n="techstack.embedded.title">嵌入式开发</h3>
+                        </div>
+                        <div class="category-items">
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.embedded.stm32">STM32</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.embedded.rtos">Keil 5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techstack-category">
+                        <div class="category-header">
+                            <div class="category-icon">🔌</div>
+                            <h3 class="category-title" data-i18n="techstack.hardware.title">硬件设计</h3>
+                        </div>
+                        <div class="category-items">
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.hardware.pcb">PCB设计</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.hardware.proteus">Proteus</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="techstack-category">
+                        <div class="category-header">
+                            <div class="category-icon">💻</div>
+                            <h3 class="category-title" data-i18n="techstack.software.title">软件与工具</h3>
+                        </div>
+                        <div class="category-items">
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.software.cpp">C++</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.software.linux">Linux</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.software.git">Git</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name" data-i18n="techstack.software.wsl">WSL</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title" data-i18n="gallery.title">相册</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/photo1.jpg" alt="图片1" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo2.jpg" alt="图片2" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo3.jpg" alt="图片3" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo4.jpg" alt="图片4" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo5.jpg" alt="图片5" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo6.jpg" alt="图片6" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo7.jpg" alt="图片7" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo8.jpg" alt="图片8" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox 灯箱 -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose">&times;</button>
+                <button class="lightbox-prev" id="lightboxPrev">&lt;</button>
+                <button class="lightbox-next" id="lightboxNext">&gt;</button>
+                <div class="lightbox-image-container">
+                    <img id="lightboxImage" src="" alt="">
+                </div>
+            </div>
+        </div>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">联系我</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3 data-i18n="contact.email">邮箱</h3>
+                                <p>jaytang12221@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3 data-i18n="contact.location">地址</h3>
+                                <p data-i18n="contact.locationValue">中国，成都</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <div class="contact-details">
+                                <h3 data-i18n="contact.socialLabel">社交媒体</h3>
+                                <div class="social-links">
+                            <a href="https://github.com/Jaytang1222" class="social-link" data-i18n="contact.social.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://www.xiaohongshu.com/user/profile/6789fcc2000000000e011f8e" class="social-link" data-i18n="contact.social.xhs" target="_blank" rel="noopener noreferrer">XHS</a>
+                            <a href="https://stackoverflow.com/users/32415781/jay-tang" class="social-link" data-i18n="contact.social.stackoverflow" target="_blank" rel="noopener noreferrer">Stack Overflow</a>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3 data-i18n="contact.formTitle">留言</h3>
+                        <p class="contact-note" data-i18n="contact.note">为了减少formspree的计划消耗，请勿重复提交留言</p>
+                        <form id="messageForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="您的姓名" data-i18n_placeholder="contact.form.namePlaceholder" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="您的邮箱" data-i18n_placeholder="contact.form.emailPlaceholder" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="您的留言" data-i18n_placeholder="contact.form.messagePlaceholder" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-i18n="contact.submit">发送</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="audio-player">
+        <div class="audio-info">
+            <div class="song-title" data-i18n="audio.songTitle">The Snowbird Strut</div>
+            <div class="song-artist" data-i18n="audio.songArtist">Jesse Gallagher</div>
+        </div>
+        <div class="audio-container">
+            <audio id="bgMusic" loop>
+                <source src="audio/background-music.mp3" type="audio/mpeg">
+                您的浏览器不支持音频播放。
+            </audio>
+            <button class="audio-control" id="audioToggle" data-i18n_title="audio.play" data-i18n_title_alt="audio.pause">
+                <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="6" y="4" width="4" height="16"></rect>
+                    <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+            </button>
+            <div class="volume-control" data-i18n_title="audio.volume">
+                <svg class="volume-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <input type="range" id="volumeSlider" min="0" max="100" value="30" class="volume-slider">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.copyright">© 2024 我的个人网站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

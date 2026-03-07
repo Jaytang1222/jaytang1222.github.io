@@ -65,6 +65,8 @@ class I18n {
         localStorage.setItem('lang', lang);
         await this.loadTranslations(lang);
         this.applyTranslations();
+        
+        document.dispatchEvent(new Event('languageChanged'));
     }
 
     setupEventListeners() {

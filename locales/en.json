@@ -87,5 +87,8 @@
         "pause": "Pause Music",
         "volume": "Volume Control",
         "autoplayFailed": "Auto-play blocked, please click play button"
+    },
+    "visitor": {
+        "count": "Visitors"
     }
 }

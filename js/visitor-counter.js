@@ -1,76 +1,46 @@
 class VisitorCounter {
     constructor() {
-        this.namespace = 'jaytang-website';
-        this.endpoint = 'https://api.countapi.xyz';
         this.element = null;
         this.count = 0;
-        this.cacheKey = 'visitorCount';
-        this.timestampKey = 'visitorTimestamp';
-        this.cacheDuration = 86400000;
+        // 替换为你的 Cloudflare Worker URL
+        this.apiUrl = 'https://visitor-counter.jaytang12221.workers.dev/api/visitor';
         this.init();
     }
 
     async init() {
-        await this.loadFromCache();
-        if (!this.count) {
+        try {
             await this.getVisitorCount();
+        } catch (error) {
+            console.error('访客计数器初始化失败:', error);
+            this.count = 0;
         }
         this.render();
         this.setupAnimation();
-        this.scheduleDailyUpdate();
-    }
-
-    async loadFromCache() {
-        try {
-            const cachedData = localStorage.getItem(this.cacheKey);
-            const cachedTimestamp = localStorage.getItem(this.timestampKey);
-
-            if (cachedData && cachedTimestamp) {
-                const now = Date.now();
-                if (now - parseInt(cachedTimestamp) < this.cacheDuration) {
-                    this.count = parseInt(cachedData);
-                    return;
-                }
-            }
-        } catch (error) {
-            console.error('加载缓存失败:', error);
-        }
-        this.count = 0;
+        this.setupLanguageListener();
     }
 
     async getVisitorCount() {
         try {
-            const response = await fetch(`${this.endpoint}/hit/${this.namespace}/home`, {
+            console.log('开始获取访客计数...');
+            
+            const response = await fetch(this.apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({})
-            });
-            
-            if (response.ok) {
-                const data = await response.json();
-                if (data && data.value !== undefined) {
-                    this.count = data.value;
-                    this.saveToCache();
-                } else {
-                    console.warn('API 返回数据格式不正确:', data);
                 }
-            } else {
-                console.error('API 请求失败:', response.status, response.statusText);
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+
+            const data = await response.json();
+            this.count = data.count || 0;
+            console.log('访客计数获取成功:', this.count);
         } catch (error) {
             console.error('获取访问量失败:', error);
-            this.loadFromCache();
-        }
-    }
-
-    saveToCache() {
-        try {
-            localStorage.setItem(this.cacheKey, this.count);
-            localStorage.setItem(this.timestampKey, Date.now().toString());
-        } catch (error) {
-            console.error('保存缓存失败:', error);
+            console.error('错误详情:', error.message);
+            this.count = 0;
         }
     }
 
@@ -121,50 +91,6 @@ class VisitorCounter {
         window.requestAnimationFrame(step);
     }
 
-    scheduleDailyUpdate() {
-        try {
-            const lastUpdate = localStorage.getItem(this.timestampKey);
-            const now = Date.now();
-
-            if (!lastUpdate || now - parseInt(lastUpdate) >= this.cacheDuration) {
-                this.getVisitorCount();
-            }
-
-            const timeUntilMidnight = this.getTimeUntilMidnight();
-            setTimeout(() => {
-                this.dailyUpdateLoop();
-            }, timeUntilMidnight);
-        } catch (error) {
-            console.error('调度每日更新失败:', error);
-        }
-    }
-
-    dailyUpdateLoop() {
-        try {
-            this.getVisitorCount();
-            const timeUntilNextDay = 86400000;
-            setTimeout(() => {
-                this.dailyUpdateLoop();
-            }, timeUntilNextDay);
-        } catch (error) {
-            console.error('每日更新循环失败:', error);
-        }
-    }
-
-    getTimeUntilMidnight() {
-        const now = new Date();
-        const midnight = new Date(now);
-        midnight.setHours(24, 0, 0, 0);
-        return midnight.getTime() - now.getTime();
-    }
-
-    updateDisplay() {
-        const countElement = document.getElementById('visitorCount');
-        if (countElement) {
-            countElement.textContent = this.count.toLocaleString();
-        }
-    }
-
     setupLanguageListener() {
         document.addEventListener('languageChanged', () => {
             this.updateText();
@@ -174,5 +100,4 @@ class VisitorCounter {
 
 document.addEventListener('DOMContentLoaded', () => {
     const visitorCounter = new VisitorCounter();
-    visitorCounter.setupLanguageListener();
 });

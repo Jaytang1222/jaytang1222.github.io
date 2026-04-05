@@ -67,6 +67,7 @@
             "stackoverflow": "Stack Overflow"
         },
         "formTitle": "Leave a Message",
+        "note": "To reduce Formspree plan consumption, please do not submit messages repeatedly",
         "submit": "Send",
         "form": {
             "namePlaceholder": "Your Name",
@@ -87,8 +88,5 @@
         "pause": "Pause Music",
         "volume": "Volume Control",
         "autoplayFailed": "Auto-play blocked, please click play button"
-    },
-    "visitor": {
-        "count": "Visitors"
     }
 }

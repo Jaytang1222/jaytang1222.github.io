@@ -87,8 +87,5 @@
         "pause": "暂停音乐",
         "volume": "音量控制",
         "autoplayFailed": "自动播放被阻止，请点击播放按钮"
-    },
-    "visitor": {
-        "count": "访问人数"
     }
 }

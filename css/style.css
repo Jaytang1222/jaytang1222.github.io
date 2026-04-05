@@ -412,7 +412,8 @@ section {
 .card-desc {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: var(--text-light);
+    opacity: 0.8;
     margin-bottom: 1rem;
 }
 

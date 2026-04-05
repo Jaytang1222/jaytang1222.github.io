@@ -96,39 +96,6 @@ class AudioPlayer {
         });
     }
 
-    setupEventListeners() {
-        // 播放/暂停按钮
-        this.audioToggle.addEventListener('click', () => {
-            this.togglePlay();
-            this.updateButtonTitle();
-        });
-
-        // 音量控制
-        this.volumeSlider.addEventListener('input', (e) => {
-            this.setVolume(e.target.value / 100);
-        });
-
-        // 音频加载完成后的处理
-        this.audio.addEventListener('loadeddata', () => {
-            if (this.isPlaying) {
-                this.play();
-            }
-        });
-
-        // 音频播放结束
-        this.audio.addEventListener('ended', () => {
-            this.isPlaying = false;
-            this.audioToggle.classList.remove('playing');
-            localStorage.setItem('audioPlaying', 'false');
-            this.updateButtonTitle();
-        });
-
-        // 监听语言切换
-        document.addEventListener('languageChanged', () => {
-            this.updateButtonTitle();
-        });
-    }
-
     updateButtonTitle() {
         const playText = this.getTranslation('audio.play');
         const pauseText = this.getTranslation('audio.pause');

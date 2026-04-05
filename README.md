@@ -18,62 +18,239 @@
 
 ```
 githubio/
-├── index.html              # 主页
+├── index.html                    # 主页入口文件
+├── README.md                     # 项目说明文档
 ├── css/
-│   ├── style.css          # 主样式文件
-│   ├── themes.css         # 主题样式
-│   └── responsive.css     # 响应式样式
+│   ├── style.css                 # 主样式文件（1169 行）
+│   ├── themes.css                # 主题样式（深色/浅色）
+│   └── responsive.css            # 响应式样式（移动端适配）
 ├── js/
-│   ├── main.js            # 主逻辑
-│   ├── i18n.js            # 国际化（双语）
-│   └── theme.js           # 主题切换
-├── images/                # 图片资源
-│   └── gallery/           # 相册图片
-├── locales/               # 语言文件
-│   ├── zh.json            # 中文
-│   └── en.json            # 英文
-└── README.md              # 项目说明
+│   ├── main.js                   # 主逻辑（导航滚动）
+│   ├── i18n.js                   # 国际化（双语切换）
+│   ├── theme.js                  # 主题切换管理
+│   ├── audio.js                  # 音频播放器
+│   ├── gallery.js                # 相册灯箱
+│   ├── form.js                   # 联系表单处理
+│   └── projects.js               # 项目数据
+├── locales/
+│   ├── zh.json                   # 中文语言包
+│   └── en.json                   # 英文语言包
+├── images/
+│   ├── personal-image.jpg        # 个人头像
+│   ├── photo1.jpg ~ photo8.jpg   # 相册图片
+│   └── projects/                 # 项目图片（需创建）
+│       ├── project1.jpg
+│       ├── project2.jpg
+│       └── project3.jpg
+└── audio/
+    └── background-music.mp3      # 背景音乐
 ```
 
-## 快速开始
+## 🚀 快速开始
 
 ### 本地预览
 
-1. 克隆或下载此项目
-2. 使用任意HTTP服务器启动项目：
+#### 方法一：使用 Python（推荐）
 
-**使用Python:**
 ```bash
+# Python 3
 python -m http.server 8000
+
+# 访问 http://localhost:8000
 ```
 
-**使用Node.js:**
+#### 方法二：使用 Node.js
+
 ```bash
-npx http-server
+# 安装 http-server（全局）
+npm install -g http-server
+
+# 启动服务器
+http-server -p 8000
+
+# 访问 http://localhost:8000
 ```
 
-**使用VS Code:**
-- 安装Live Server插件
-- 右键点击index.html，选择"Open with Live Server"
+#### 方法三：使用 VS Code
 
-3. 在浏览器中访问 `http://localhost:8000`
+1. 安装 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 插件
+2. 右键点击 `index.html`
+3. 选择 "Open with Live Server"
 
-## 部署到GitHub Pages
+#### 方法四：使用 PHP
 
-### 方法一：使用GitHub仓库
+```bash
+php -S localhost:8000
 
-1. 在GitHub上创建新仓库（仓库名建议使用 `yourusername.github.io`）
-2. 将项目文件推送到仓库的main分支
-3. 进入仓库的Settings > Pages
-4. 在Source中选择Deploy from a branch
-5. 选择main分支和根目录
-6. 点击Save
-7. 等待几分钟后，访问 `https://yourusername.github.io`
+# 访问 http://localhost:8000
+```
 
-### 方法二：使用GitHub Actions（推荐）
+### 浏览器支持
 
-1. 在仓库中创建 `.github/workflows/deploy.yml`
-2. 添加以下内容：
+- ✅ Chrome (最新版)
+- ✅ Firefox (最新版)
+- ✅ Safari (最新版)
+- ✅ Edge (最新版)
+- ✅ Opera (最新版)
+
+## 📝 配置说明
+
+### 修改个人信息
+
+#### 1. 编辑语言文件
+
+**中文内容** - `locales/zh.json`：
+```json
+{
+    "hero": {
+        "title": "你好，我是Jay",
+        "subtitle": "欢迎来到我的空间"
+    },
+    "about": {
+        "description": "重庆大学2024级计算机科学与技术卓越班在读",
+        "experience": "重庆大学START时空实验室成员..."
+    }
+}
+```
+
+**英文内容** - `locales/en.json`：
+```json
+{
+    "hero": {
+        "title": "Hi, I'm Jay",
+        "subtitle": "Welcome to my space"
+    },
+    "about": {
+        "description": "Chongqing University Class of 2024...",
+        "experience": "Member of Chongqing University START..."
+    }
+}
+```
+
+#### 2. 修改联系方式
+
+在 `index.html` 中修改：
+
+```html
+<!-- 邮箱地址 -->
+<p>jaytang12221@outlook.com</p>
+
+<!-- 社交媒体链接 -->
+<a href="https://github.com/Jaytang1222" target="_blank">GitHub</a>
+<a href="https://www.xiaohongshu.com/user/profile/..." target="_blank">XHS</a>
+<a href="https://stackoverflow.com/users/32415781/..." target="_blank">Stack Overflow</a>
+```
+
+#### 3. 添加项目
+
+编辑 `js/projects.js` 文件：
+
+```javascript
+const projectsData = [
+    {
+        id: 1,
+        title: {
+            zh: "项目名称",
+            en: "Project Name"
+        },
+        description: {
+            zh: "项目描述",
+            en: "Project description in English"
+        },
+        techStack: ["技术1", "技术2", "技术3"],
+        image: "images/projects/project1.jpg",
+        github: "https://github.com/username/repo",
+        demo: "https://yourwebsite.com/project"
+    }
+];
+```
+
+### 配置背景音乐
+
+编辑 `js/audio.js` 中的歌曲信息：
+
+```javascript
+this.songInfo = {
+    zh: {
+        title: "歌曲名称",
+        artist: "艺术家名称"
+    },
+    en: {
+        title: "Song Title",
+        artist: "Artist Name"
+    }
+};
+```
+
+### 配置 Formspree 表单
+
+1. 访问 [Formspree](https://formspree.io/) 注册账号
+2. 创建新表单，获取 Form ID
+3. 编辑 `js/form.js`，替换 Formspree URL：
+
+```javascript
+this.formspreeUrl = 'https://formspree.io/f/YOUR_FORM_ID';
+```
+
+**注意**：当前项目已配置 Formspree URL 为 `https://formspree.io/f/xaqdkego`
+
+### 自定义主题颜色
+
+编辑 `css/style.css` 中的 CSS 变量：
+
+```css
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    
+    --bg-light: #ffffff;
+    --bg-dark: #1a1a2e;
+    --text-light: #333333;
+    --text-dark: #e0e0e0;
+    --card-light: #f8f9fa;
+    --card-dark: #16213e;
+    --border-light: #e0e0e0;
+    --border-dark: #2a2a4a;
+}
+```
+
+## 🚢 部署到 GitHub Pages
+
+### 方法一：使用 GitHub 仓库（推荐）
+
+1. **创建 GitHub 仓库**
+   - 仓库名建议使用：`yourusername.github.io`
+   - 或者使用任意名称，配置自定义域名
+
+2. **推送代码**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/yourusername.github.io.git
+   git push -u origin main
+   ```
+
+3. **配置 GitHub Pages**
+   - 进入仓库的 `Settings` > `Pages`
+   - 在 `Source` 中选择 `Deploy from a branch`
+   - 选择 `main` 分支和 `/ (root)` 目录
+   - 点击 `Save`
+
+4. **等待部署完成**
+   - 等待几分钟后，访问 `https://yourusername.github.io`
+
+### 方法二：使用 GitHub Actions（自动化部署）
+
+1. **创建工作流文件**
+   ```bash
+   mkdir -p .github/workflows
+   touch .github/workflows/deploy.yml
+   ```
+
+2. **添加以下内容** - `.github/workflows/deploy.yml`：
 
 ```yaml
 name: Deploy to GitHub Pages
@@ -95,77 +272,135 @@ jobs:
           publish_dir: .
 ```
 
-3. 推送代码后，GitHub Actions会自动部署
+3. **推送代码**
+   ```bash
+   git add .github/workflows/deploy.yml
+   git commit -m "Add GitHub Actions workflow"
+   git push
+   ```
 
-## 配置说明
+4. **自动部署**
+   - GitHub Actions 会自动部署到 GitHub Pages
+   - 访问 `https://yourusername.github.io`
 
-### 修改个人信息
+### 方法三：使用自定义域名
 
-编辑 `index.html` 文件中的以下内容：
+1. **在仓库设置中配置**
+   - `Settings` > `Pages`
+   - 在 `Custom domain` 中输入您的域名
+   - 勾选 `Enforce HTTPS`
 
-- 邮箱地址：修改 `your.email@example.com`
-- 社交媒体链接：修改GitHub、Twitter、LinkedIn链接
-- 个人介绍：在 `locales/zh.json` 和 `locales/en.json` 中修改
+2. **配置 DNS**
+   - A 记录：指向 `185.199.108.153`
+   - AAAA 记录：指向 `2606:50c0:8000::153`
+   - 或使用 CNAME 记录指向 `yourusername.github.io`
 
-### 添加图片
+3. **等待生效**
+   - DNS 解析可能需要几分钟到几小时
 
-1. 将图片文件放入 `images/gallery/` 目录
-2. 编辑 `index.html` 中的相册部分，将占位符替换为实际图片：
+## 🎯 页面 sections
 
-```html
-<div class="gallery-item">
-    <img src="images/gallery/your-image.jpg" alt="图片描述">
-</div>
-```
+### 1. 首页 (Hero)
+- 个人头像（带旋转光晕效果）
+- 简短自我介绍
+- CTA 按钮跳转到关于部分
 
-### 配置留言板
+### 2. 关于我 (About)
+- 个人基本信息
+- 教育背景
+- 技术技能标签
 
-1. 访问 [Formspree](https://formspree.io/) 注册账号
-2. 创建新表单，获取Form ID
-3. 编辑 `js/main.js`，将 `YOUR_FORM_ID` 替换为实际的Form ID：
+### 3. 技术栈 (Tech Stack)
+- 嵌入式开发（STM32、Keil 5）
+- 硬件设计（PCB、Proteus）
+- 软件与工具（C++、Linux、Git、WSL）
 
-```javascript
-const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-```
+### 4. 个人项目 (Projects)
+- 项目网格展示
+- 项目图片、描述、技术栈
+- GitHub 和演示链接
 
-### 修改语言内容
+### 5. 相册 (Gallery)
+- 8 张展示图片
+- 点击查看大图
+- 灯箱效果支持键盘导航
 
-编辑 `locales/zh.json` 和 `locales/en.json` 文件来自定义双语内容。
+### 6. 联系我 (Contact)
+- 联系信息（邮箱、地址、社交媒体）
+- 留言表单（Formspree 集成）
 
-### 自定义主题颜色
+## 🎨 设计亮点
 
-编辑 `css/style.css` 中的CSS变量：
+### 动画效果
+- **旋转光晕**：头像周围的三层旋转光晕
+- **悬停效果**：卡片和按钮的悬停动画
+- **淡入动画**：页面加载时的元素淡入
+- **平滑滚动**：导航链接的平滑滚动
 
-```css
-:root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-```
+### 交互体验
+- **语言切换**：点击右上角切换中英文
+- **主题切换**：点击太阳/月亮图标切换主题
+- **音频控制**：底部音频播放器，支持播放/暂停/音量控制
+- **表单验证**：实时验证，友好的错误提示
 
-## 浏览器支持
+### 响应式设计
+- **桌面端**（> 992px）：多列布局
+- **平板端**（768px - 992px）：自适应布局
+- **移动端**（< 768px）：单列布局，优化触摸体验
+- **小屏幕**（< 480px）：进一步优化布局
 
-- Chrome (最新版)
-- Firefox (最新版)
-- Safari (最新版)
-- Edge (最新版)
+## 📊 性能指标
 
-## 技术栈
+- **无第三方依赖**：纯原生实现
+- **快速加载**：优化的资源加载
+- **懒加载图片**：减少初始加载时间
+- **精简 CSS/JS**：无冗余代码
 
-- HTML5
-- CSS3 (CSS Grid, Flexbox, CSS Variables)
-- JavaScript (ES6+)
-- 无需任何框架或构建工具
+## 🔧 开发指南
 
-## 许可证
+### 添加新功能
+
+1. **添加新页面 section**
+   - 在 `index.html` 中添加 section
+   - 在 `css/style.css` 中添加样式
+   - 在 `js/main.js` 中添加逻辑
+
+2. **添加新语言支持**
+   - 在 `locales/` 中创建新语言文件
+   - 在 `i18n.js` 中添加语言切换逻辑
+
+3. **添加新主题**
+   - 在 `css/themes.css` 中添加主题变量
+   - 在 `theme.js` 中添加主题切换逻辑
+
+### 代码规范
+
+- **HTML**：语义化标签，良好的缩进
+- **CSS**：使用 CSS 变量，遵循 BEM 命名规范
+- **JavaScript**：使用 ES6+ 语法，类结构清晰
+
+## 📄 许可证
 
 MIT License
 
-## 贡献
+## 🤝 贡献
 
-欢迎提交Issue和Pull Request！
+欢迎提交 Issue 和 Pull Request！
 
-## 联系方式
+## 📧 联系方式
 
-如有问题，请通过网站上的留言板或社交媒体联系我。
+如有问题，请通过以下方式联系我：
+- 邮箱：jaytang12221@outlook.com
+- GitHub：[@Jaytang1222](https://github.com/Jaytang1222)
+- 小红书：[@JayTang](https://www.xiaohongshu.com/user/profile/...)
+- Stack Overflow：[@Jay Tang](https://stackoverflow.com/users/32415781/jay-tang)
+
+## 🙏 致谢
+
+- 感谢使用 [Formspree](https://formspree.io/) 提供表单服务
+- 感谢使用 [FontAwesome](https://fontawesome.com/) 图标（本项目使用 SVG 内联）
+- 感谢开源社区提供的各种资源
+
+---
+
+**© 2024 JayTang | 个人主页**. 保留所有权利.

@@ -61,7 +61,7 @@ class ContactForm {
     validateMessage() {
         const message = this.messageInput.value.trim();
         const errorElement = this.createErrorElement('messageError', 
-            message.length < 10 ? '留言内容至少需要10个字符' : '');
+            message.length != 0 ? '留言内容不能为空' : '');
         
         if (errorElement) {
             this.messageInput.parentNode.appendChild(errorElement);
@@ -118,8 +118,6 @@ class ContactForm {
             if (response.ok) {
                 this.showSuccess('留言发送成功！感谢您的联系。');
                 this.form.reset();
-            } else {
-                this.showError('发送失败，请稍后重试。');
             }
         } catch (error) {
             console.error('Error:', error);

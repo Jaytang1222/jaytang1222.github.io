@@ -61,7 +61,7 @@ class ContactForm {
     validateMessage() {
         const message = this.messageInput.value.trim();
         const errorElement = this.createErrorElement('messageError', 
-            message.length != 0 ? '留言内容不能为空' : '');
+            message.length == 0 ? '留言内容不能为空' : '');
         
         if (errorElement) {
             this.messageInput.parentNode.appendChild(errorElement);

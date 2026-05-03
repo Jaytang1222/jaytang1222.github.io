@@ -1,0 +1,124 @@
+{
+    "logo": "JayTang",
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "home": {
+        "name": "JayTang",
+        "title": "Computer Science & Technology",
+        "education": "Education",
+        "educationValue": "Chongqing University",
+        "lab": "Laboratory",
+        "location": "Location",
+        "locationValue": "Chengdu, China",
+        "email": "Email",
+        "socialTitle": "Social Media",
+        "viewProjects": "View Projects",
+        "contactMe": "Contact Me",
+        "aboutTitle": "About Me",
+        "aboutP1": "Computer Science and Technology Honors Program student at Chongqing University (Class of 2024), specializing in embedded systems development and software engineering.",
+        "aboutP2": "As a member of the START Spatiotemporal Laboratory at Chongqing University, I have participated in multiple embedded projects and gained extensive practical experience. Proficient in STM32 development, PCB design, and embedded system debugging.",
+        "learnMore": "Learn More →",
+        "projectsTitle": "Featured Projects",
+        "viewAllProjects": "View All →",
+        "skillsTitle": "Core Skills",
+        "skills": {
+            "embedded": "Embedded Development",
+            "hardware": "Hardware Design",
+            "programming": "Programming Languages"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "intro": {
+            "title": "Introduction",
+            "p1": "Computer Science and Technology Honors Program student at Chongqing University (Class of 2024), specializing in embedded systems development and software engineering.",
+            "p2": "As a member of the START Spatiotemporal Laboratory at Chongqing University, I have participated in multiple embedded projects and gained extensive practical experience."
+        },
+        "education": {
+            "title": "Education",
+            "university": "Chongqing University",
+            "year": "2024 - Present",
+            "major": "Computer Science and Technology (Honors Program)",
+            "desc": "Core Courses: Data Structures, Algorithm Design, Embedded Systems, Computer Organization"
+        },
+        "research": {
+            "title": "Research Experience",
+            "lab": "START Spatiotemporal Laboratory",
+            "role": "Research Member",
+            "item1": "Participated in STM32 smart car project development",
+            "item2": "Responsible for hardware circuit design and PCB layout",
+            "item3": "Implemented intelligent control algorithms for line tracking and obstacle avoidance"
+        },
+        "interests": {
+            "title": "Interests",
+            "coding": "Programming",
+            "cycling": "Cycling",
+            "music": "Music",
+            "explore": "Exploration"
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "filter": {
+            "all": "All",
+            "embedded": "Embedded",
+            "web": "Web Dev",
+            "iot": "IoT"
+        }
+    },
+    "skills": {
+        "title": "Technical Skills",
+        "embedded": {
+            "title": "Embedded Development",
+            "stm32": "STM32",
+            "keil": "Keil 5"
+        },
+        "hardware": {
+            "title": "Hardware Design",
+            "pcb": "PCB Design",
+            "proteus": "Proteus"
+        },
+        "software": {
+            "title": "Programming Languages",
+            "cpp": "C/C++",
+            "javascript": "JavaScript"
+        },
+        "tools": {
+            "title": "Development Tools",
+            "git": "Git",
+            "linux": "Linux",
+            "wsl": "WSL"
+        }
+    },
+    "contact": {
+        "title": "Contact Me",
+        "email": "Email",
+        "location": "Location",
+        "locationValue": "Chengdu, China",
+        "socialLabel": "Social Media",
+        "social": {
+            "github": "GitHub",
+            "xhs": "Xiaohongshu",
+            "stackoverflow": "Stack Overflow"
+        },
+        "formTitle": "Send Message",
+        "note": "To reduce Formspree plan consumption, please do not submit messages repeatedly",
+        "form": {
+            "nameLabel": "Name",
+            "namePlaceholder": "Your Name",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Your Email",
+            "messageLabel": "Message",
+            "messagePlaceholder": "Your Message"
+        },
+        "submit": "Send"
+    },
+    "footer": {
+        "copyright": "© 2024 JayTang. All rights reserved."
+    }
+}

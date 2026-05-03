@@ -1,0 +1,322 @@
+/**
+ * 响应式设计
+ */
+
+/* 大屏幕优化 */
+@media (min-width: 1400px) {
+    .home-container {
+        max-width: 1600px;
+    }
+}
+
+/* 平板设备 */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .home-container {
+        grid-template-columns: 300px 1fr;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .projects-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-overview {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .home-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* 移动设备 */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0.75rem;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* 首页移动端布局 */
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .home-sidebar {
+        position: static;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    .quick-actions {
+        flex-direction: row;
+    }
+
+    .home-about,
+    .home-projects {
+        padding: 1.5rem;
+    }
+
+    .section-heading {
+        font-size: 1.25rem;
+    }
+
+    .projects-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .home-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skills-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-filter {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-section {
+        padding: 1.5rem;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audio-player {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .audio-control {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* 小屏幕移动设备 */
+@media (max-width: 480px) {
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name {
+        font-size: 1.25rem;
+    }
+
+    .info-item {
+        gap: 0.75rem;
+    }
+
+    .info-icon {
+        font-size: 1.25rem;
+    }
+
+    .quick-actions {
+        flex-direction: column;
+    }
+
+    .section-heading {
+        font-size: 1.125rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .about-section {
+        padding: 1rem;
+    }
+
+    .about-section-title {
+        font-size: 1.25rem;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        border-radius: 0.75rem;
+    }
+
+    .project-body {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+
+    .form-notification {
+        top: 4.5rem;
+        width: calc(100% - 2rem);
+    }
+
+    .home-stats {
+        gap: 0.75rem;
+    }
+
+    .skills-overview {
+        gap: 0.75rem;
+    }
+
+    .skill-category-home {
+        padding: 1rem;
+    }
+
+    .stat-card {
+        padding: 1.25rem;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .modal-content {
+        margin: 1rem;
+        max-height: calc(100vh - 2rem);
+    }
+
+    .modal-header,
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .header,
+    .audio-player,
+    .nav-actions,
+    .quick-actions,
+    .projects-filter,
+    .contact-form-wrapper {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .tab-content {
+        display: block !important;
+        page-break-after: always;
+    }
+
+    .project-card,
+    .skill-category,
+    .about-section {
+        page-break-inside: avoid;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr;
+    }
+}

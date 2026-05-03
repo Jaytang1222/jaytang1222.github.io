@@ -1,0 +1,124 @@
+{
+    "logo": "JayTang",
+    "nav": {
+        "home": "首页",
+        "about": "关于我",
+        "projects": "项目",
+        "skills": "技能",
+        "contact": "联系"
+    },
+    "home": {
+        "name": "JayTang",
+        "title": "计算机科学与技术",
+        "education": "教育",
+        "educationValue": "重庆大学",
+        "lab": "实验室",
+        "location": "位置",
+        "locationValue": "成都，中国",
+        "email": "邮箱",
+        "socialTitle": "社交媒体",
+        "viewProjects": "查看项目",
+        "contactMe": "联系我",
+        "aboutTitle": "关于我",
+        "aboutP1": "重庆大学2024级计算机科学与技术卓越班在读学生，专注于嵌入式系统开发和软件工程。",
+        "aboutP2": "作为重庆大学START时空实验室成员，我参与了多个嵌入式项目的开发，积累了丰富的实践经验。擅长STM32开发、PCB设计和嵌入式系统调试。",
+        "learnMore": "了解更多 →",
+        "projectsTitle": "精选项目",
+        "viewAllProjects": "查看全部 →",
+        "skillsTitle": "核心技能",
+        "skills": {
+            "embedded": "嵌入式开发",
+            "hardware": "硬件设计",
+            "programming": "编程语言"
+        }
+    },
+    "about": {
+        "title": "关于我",
+        "intro": {
+            "title": "个人简介",
+            "p1": "重庆大学2024级计算机科学与技术卓越班在读学生，专注于嵌入式系统开发和软件工程。",
+            "p2": "作为重庆大学START时空实验室成员，我参与了多个嵌入式项目的开发，积累了丰富的实践经验。"
+        },
+        "education": {
+            "title": "教育经历",
+            "university": "重庆大学",
+            "year": "2024 - 至今",
+            "major": "计算机科学与技术（卓越班）",
+            "desc": "核心课程：数据结构、算法设计、嵌入式系统、计算机组成原理"
+        },
+        "research": {
+            "title": "研究经历",
+            "lab": "START时空实验室",
+            "role": "研究成员",
+            "item1": "参与STM32智能小车项目开发",
+            "item2": "负责硬件电路设计与PCB绘制",
+            "item3": "实现循迹、避障等智能控制算法"
+        },
+        "interests": {
+            "title": "兴趣爱好",
+            "coding": "编程开发",
+            "cycling": "骑行",
+            "music": "音乐",
+            "explore": "探索"
+        }
+    },
+    "projects": {
+        "title": "项目展示",
+        "filter": {
+            "all": "全部",
+            "embedded": "嵌入式",
+            "web": "Web开发",
+            "iot": "物联网"
+        }
+    },
+    "skills": {
+        "title": "技术技能",
+        "embedded": {
+            "title": "嵌入式开发",
+            "stm32": "STM32",
+            "keil": "Keil 5"
+        },
+        "hardware": {
+            "title": "硬件设计",
+            "pcb": "PCB设计",
+            "proteus": "Proteus"
+        },
+        "software": {
+            "title": "编程语言",
+            "cpp": "C/C++",
+            "javascript": "JavaScript"
+        },
+        "tools": {
+            "title": "开发工具",
+            "git": "Git",
+            "linux": "Linux",
+            "wsl": "WSL"
+        }
+    },
+    "contact": {
+        "title": "联系我",
+        "email": "邮箱",
+        "location": "地址",
+        "locationValue": "中国，成都",
+        "socialLabel": "社交媒体",
+        "social": {
+            "github": "GitHub",
+            "xhs": "小红书",
+            "stackoverflow": "Stack Overflow"
+        },
+        "formTitle": "发送消息",
+        "note": "为了减少formspree的计划消耗，请勿重复提交留言",
+        "form": {
+            "nameLabel": "姓名",
+            "namePlaceholder": "您的姓名",
+            "emailLabel": "邮箱",
+            "emailPlaceholder": "您的邮箱",
+            "messageLabel": "留言",
+            "messagePlaceholder": "您的留言"
+        },
+        "submit": "发送"
+    },
+    "footer": {
+        "copyright": "© 2024 JayTang. 保留所有权利."
+    }
+}

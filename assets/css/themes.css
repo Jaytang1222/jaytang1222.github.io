@@ -149,3 +149,114 @@ body.dark-mode::-webkit-scrollbar-thumb {
 body.dark-mode::-webkit-scrollbar-thumb:hover {
     background: var(--border-color);
 }
+
+/* 深色模式 - 新项目卡片样式 */
+body.dark-mode .project-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .project-card.featured {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .project-card:hover {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .project-card-header {
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .project-card-footer {
+    border-top-color: var(--border-color);
+}
+
+body.dark-mode .tech-tag {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+body.dark-mode .modal-container {
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+body.dark-mode .overview-item {
+    background: var(--bg-tertiary);
+    border-left-color: var(--primary-color);
+}
+
+body.dark-mode .modal-list li {
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .modal-image-item {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .modal-image-item:hover {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .lightbox-info {
+    background: rgba(30, 41, 59, 0.95);
+}
+
+body.dark-mode .publication-card,
+body.dark-mode .research-project-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .publication-abstract {
+    background: var(--bg-tertiary);
+    border-left-color: var(--primary-color);
+}
+
+body.dark-mode .pub-link {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-mode .pub-link:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .project-card-header {
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .project-tech {
+    border-top-color: var(--border-color);
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .interest-tag {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-mode .interest-tag:hover {
+    border-color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.1);
+}
+
+/* 深色模式 - 下载简历按钮 */
+body.dark-mode .btn-resume {
+    background: #16a34a;
+    color: white;
+}
+
+body.dark-mode .btn-resume:hover {
+    background: #15803d;
+}

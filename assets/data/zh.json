@@ -1,0 +1,131 @@
+{
+    "logo": "JayTang",
+    "nav": {
+        "home": "首页",
+        "about": "关于我",
+        "projects": "项目",
+        "research": "研究",
+        "resume": "简历"
+    },
+    "home": {
+        "name": "JayTang",
+        "title": "计算机科学与技术",
+        "education": "教育",
+        "educationValue": "重庆大学",
+        "lab": "实验室",
+        "location": "位置",
+        "locationValue": "成都，中国",
+        "email": "邮箱",
+        "socialTitle": "找到我",
+        "viewProjects": "查看项目",
+        "downloadResume": "下载简历",
+        "aboutTitle": "关于我",
+        "aboutP1": "重庆大学计算机科学与技术卓越班在读学生，重庆大学START时空实验室成员。",
+        "aboutP2": "为大创项目开发了基于多智能体协作的科学统计图表到代码生成系统。在实验室中研究方向为时空数据管理，目前一篇ICDE论文在投。喜欢钻研计算机技术，抗压能力强，心态乐观。",
+        "learnMore": "了解更多 →",
+        "projectsTitle": "我的项目",
+        "viewAllProjects": "查看全部 →",
+        "contactTitle": "留言板"
+    },
+    "about": {
+        "title": "关于我",
+        "intro": {
+            "title": "个人简介",
+            "p1": "重庆大学计算机科学与技术卓越班在读学生，重庆大学START时空实验室成员。",
+            "p2": "为大创项目开发了基于多智能体协作的科学统计图表到代码生成系统。在实验室中研究方向为时空数据管理，目前一篇ICDE论文在投。喜欢钻研计算机技术，抗压能力强，心态乐观。"
+        },
+        "education": {
+            "title": "教育经历",
+            "university": "重庆大学",
+            "year": "2024 - 至今",
+            "major": "计算机科学与技术"
+        },
+        "research": {
+            "title": "研究经历",
+            "lab": "重庆大学START时空实验室",
+            "role": "研究成员",
+            "item1": "参与论文LETI: Learned Space Filling Curves for Efficient Trajectory Indexing in Key-Value Databases中实验部分的工作",
+            "item2": "参与公众号论文分享介绍的撰写"
+        },
+        "interests": {
+            "title": "兴趣爱好",
+            "coding": "Coding",
+            "cycling": "骑行",
+            "music": "音乐",
+            "explore": "羽球"
+        }
+    },
+    "projects": {
+        "title": "项目展示",
+        "filter": {
+            "all": "全部",
+            "embedded": "AI系统",
+            "web": "全栈工程",
+            "iot": "数据库"
+        }
+    },
+    "research": {
+        "title": "Research",
+        "focus": "时空数据管理 / 多智能体系统",
+        "intro": "在重庆大学START时空实验室的工作中，主要针对时空数据的并发性，空间填充曲线进行研究。在大创项目中，主要针对多智能体框架进行研究。包括多智能体之间数据的传输反馈，协同框架的优化。",
+        "publications": {
+            "title": "Publication",
+            "paper1": {
+                "title": "LETI: Learned Space Filling Curves for Efficient Trajectory Indexing in Key-Value Databases",
+                "status": "Manuscript in preparation (ICDE 2026)",
+                "authorMe": "汤英琦",
+                "problem": "在大规模键值（KV）存储中，现有轨迹索引由于固定的空间层次和遍历顺序，在处理偏斜分布数据时会导致查询范围碎片化和过滤效率低。",
+                "method": "提出了LETI框架，通过强化学习（RL）训练数据感知的学习型空间填充曲线（LSFC），结合基于密度的四叉树剪枝和自适应形状编码来优化时空局部性。",
+                "result": "实验表明，LETI在真实数据集上较现有最优基准（如TShape）提升了最高32.4%的查询性能，并展现出卓越的分布式扩展性。",
+                "contribution1": "联合优化空间层次、遍历顺序和形状表示，减少KV存储中的查询扫描区间碎片。",
+                "contribution2": "将SFC构建建模为序贯决策问题，利用PPO强化学习算法捕获工作负载和轨迹分布特征。",
+                "contribution3": "设计自适应形状编码方案，基于局部数据分布动态调整分区大小，平衡存储开销与过滤精度。",
+                "role": "负责将baseline方法中的代码转译到实验框架运行对比试验，在服务器上运行分布式实验，负责消融实验的运行，负责论文中实验部分的画图与撰写。"
+            }
+        },
+        "projects": {
+            "title": "Research Projects",
+            "project1": {
+                "title": "多智能体协作的科学图表到代码生成系统",
+                "type": "大创项目",
+                "problem": "科研人员需要大量时间编写数据可视化代码，现有工具难以理解复杂的统计图表需求",
+                "solution": "设计多智能体协作框架，将任务分解为图表理解、代码生成、调试优化三个阶段，使用大语言模型实现端到端的自动化生成",
+                "contribution": "负责整个项目的前后端代码实现，多智能体架构的搭建，多维验证器的代码实现"
+            }
+        },
+        "interests": {
+            "title": "Research Interests"
+        },
+        "problem": "问题：",
+        "solution": "方法：",
+        "contribution": "贡献：",
+        "abstractProblem": "问题：",
+        "abstractMethod": "方法：",
+        "abstractResult": "结果：",
+        "contributions": {
+            "title": "Key Contributions"
+        },
+        "role": {
+            "title": "My Role"
+        },
+        "links": {
+            "paper": "Paper",
+            "code": "Code",
+            "demo": "Demo"
+        }
+    },
+    "contact": {
+        "form": {
+            "nameLabel": "姓名",
+            "namePlaceholder": "您的姓名",
+            "emailLabel": "邮箱",
+            "emailPlaceholder": "您的邮箱",
+            "messageLabel": "留言",
+            "messagePlaceholder": "您的留言"
+        },
+        "submit": "发送"
+    },
+    "footer": {
+        "copyright": "© 2024 JayTang. 保留所有权利."
+    }
+}

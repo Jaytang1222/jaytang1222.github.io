@@ -1,3 +1,6 @@
+/**
+ * 国际化管理
+ */
 class I18n {
     constructor() {
         this.currentLang = localStorage.getItem('lang') || 'zh';
@@ -13,7 +16,7 @@ class I18n {
 
     async loadTranslations(lang) {
         try {
-            const response = await fetch(`locales/${lang}.json`);
+            const response = await fetch(`assets/data/${lang}.json`);
             this.translations = await response.json();
         } catch (error) {
             console.error('Failed to load translations:', error);
@@ -21,6 +24,7 @@ class I18n {
     }
 
     applyTranslations() {
+        // 处理文本内容
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
@@ -30,7 +34,7 @@ class I18n {
             }
         });
 
-        // Handle placeholder attributes
+        // 处理placeholder属性
         const placeholderElements = document.querySelectorAll('[data-i18n_placeholder]');
         placeholderElements.forEach(element => {
             const key = element.getAttribute('data-i18n_placeholder');
@@ -40,7 +44,7 @@ class I18n {
             }
         });
 
-        // Handle title attributes
+        // 处理title属性
         const titleElements = document.querySelectorAll('[data-i18n_title]');
         titleElements.forEach(element => {
             const key = element.getAttribute('data-i18n_title');
@@ -50,8 +54,24 @@ class I18n {
             }
         });
 
+        // 处理aria-label属性
+        const ariaElements = document.querySelectorAll('[data-i18n_aria]');
+        ariaElements.forEach(element => {
+            const key = element.getAttribute('data-i18n_aria');
+            const value = this.getNestedValue(this.translations, key);
+            if (value) {
+                element.setAttribute('aria-label', value);
+            }
+        });
+
+        // 更新HTML lang属性
         document.documentElement.lang = this.currentLang === 'zh' ? 'zh-CN' : 'en';
-        document.getElementById('langSwitch').textContent = this.currentLang === 'zh' ? 'EN' : '中文';
+        
+        // 更新语言切换按钮文本
+        const langSwitch = document.getElementById('langSwitch');
+        if (langSwitch) {
+            langSwitch.textContent = this.currentLang === 'zh' ? 'EN' : '中文';
+        }
     }
 
     getNestedValue(obj, path) {
@@ -66,18 +86,22 @@ class I18n {
         await this.loadTranslations(lang);
         this.applyTranslations();
         
+        // 触发语言切换事件
         document.dispatchEvent(new Event('languageChanged'));
     }
 
     setupEventListeners() {
         const langSwitch = document.getElementById('langSwitch');
-        langSwitch.addEventListener('click', () => {
-            const newLang = this.currentLang === 'zh' ? 'en' : 'zh';
-            this.switchLanguage(newLang);
-        });
+        if (langSwitch) {
+            langSwitch.addEventListener('click', () => {
+                const newLang = this.currentLang === 'zh' ? 'en' : 'zh';
+                this.switchLanguage(newLang);
+            });
+        }
     }
 }
 
+// 初始化国际化
 document.addEventListener('DOMContentLoaded', () => {
     new I18n();
 });

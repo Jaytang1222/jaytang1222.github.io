@@ -1,0 +1,129 @@
+{
+    "logo": "JayTang",
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "research": "Research",
+        "resume": "Resume"
+    },
+    "home": {
+        "name": "JayTang",
+        "title": "Computer Science & Technology",
+        "education": "Education",
+        "educationValue": "Chongqing University",
+        "lab": "Laboratory",
+        "location": "Location",
+        "locationValue": "Chengdu, China",
+        "email": "Email",
+        "socialTitle": "Find Me",
+        "viewProjects": "View Projects",
+        "downloadResume": "Download Resume",
+        "aboutTitle": "About Me",
+        "aboutP1": "Computer Science and Technology Honors Program student at Chongqing University, member of the START Spatiotemporal Laboratory at Chongqing University.",
+        "aboutP2": "Developed a multi-agent collaborative scientific chart-to-code generation system for the innovation project. Research focus in the lab is spatiotemporal data management, with one ICDE paper currently under submission. Passionate about computer technology, strong stress tolerance, and optimistic mindset.",
+        "learnMore": "Learn More →",
+        "projectsTitle": "Featured Projects",
+        "viewAllProjects": "View All →",
+        "contactTitle": "Message Board"
+    },
+    "about": {
+        "title": "About Me",
+        "intro": {
+            "title": "Introduction",
+            "p1": "Computer Science and Technology Honors Program student at Chongqing University, member of the START Spatiotemporal Laboratory at Chongqing University.",
+            "p2": "Developed a multi-agent collaborative scientific chart-to-code generation system for the innovation project. Research focus in the lab is spatiotemporal data management, with one ICDE paper currently under submission. Passionate about computer technology, strong stress tolerance, and optimistic mindset."
+        },
+        "education": {
+            "title": "Education",
+            "university": "Chongqing University",
+            "year": "2024 - Present",
+            "major": "Computer Science and Technology"
+        },
+        "research": {
+            "title": "Research Experience",
+            "lab": "START Spatiotemporal Laboratory, Chongqing University",
+            "role": "Research Member",
+            "item1": "Participated in the experimental work of the paper LETI: Learned Space Filling Curves for Efficient Trajectory Indexing in Key-Value Databases",
+            "item2": "Participated in writing paper introduction articles for the public account"
+        },
+        "interests": {
+            "title": "Interests",
+            "coding": "Coding",
+            "cycling": "Cycling",
+            "music": "Music",
+            "explore": "Badminton"
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "filter": {
+            "all": "All",
+            "embedded": "AI System",
+            "web": "Full-stack",
+            "iot": "Database"
+        }
+    },
+    "research": {
+        "title": "Research",
+        "focus": "Spatiotemporal Data Management / Multi-Agent Systems",
+        "intro": "At Chongqing University's START Spatiotemporal Laboratory, I primarily research concurrency in spatiotemporal data and space-filling curves. In the innovation project, I mainly focus on multi-agent frameworks, including data transmission and feedback between agents, and optimization of collaborative frameworks.",
+        "publications": {
+            "title": "Publication",
+            "paper1": {
+                "title": "LETI: Learned Space Filling Curves for Efficient Trajectory Indexing in Key-Value Databases",
+                "status": "Manuscript in preparation (ICDE 2026)",
+                "authors": "Tianyu Huang, <strong>Yingqi Tang</strong>, Ruiyuan Li",
+                "abstract": "<strong>Problem:</strong> In large-scale key-value (KV) stores, existing trajectory indexes suffer from query range fragmentation and low filtering efficiency when handling skewed data distributions due to fixed spatial hierarchies and traversal orders. <strong>Method:</strong> Proposed the LETI framework, which trains data-aware learned space-filling curves (LSFC) through reinforcement learning (RL), combined with density-based quadtree pruning and adaptive shape encoding to optimize spatiotemporal locality. <strong>Results:</strong> Experiments show that LETI achieves up to 32.4% query performance improvement over state-of-the-art baselines (such as TShape) on real datasets, demonstrating excellent distributed scalability.",
+                "contribution1": "Jointly optimized spatial hierarchy, traversal order, and shape representation to reduce query scan interval fragmentation in KV stores.",
+                "contribution2": "Modeled SFC construction as a sequential decision problem, utilizing PPO reinforcement learning algorithm to capture workload and trajectory distribution characteristics.",
+                "contribution3": "Designed adaptive shape encoding scheme that dynamically adjusts partition sizes based on local data distribution, balancing storage overhead and filtering accuracy.",
+                "role": "Responsible for translating baseline method code to the experimental framework for comparative experiments, running distributed experiments on servers, conducting ablation experiments, and creating figures and writing the experimental section of the paper."
+            }
+        },
+        "projects": {
+            "title": "Research Projects",
+            "project1": {
+                "title": "Multi-Agent Collaborative Scientific Chart to Code Generation System",
+                "type": "Innovation Project",
+                "problem": "Researchers spend significant time writing data visualization code, and existing tools struggle to understand complex statistical chart requirements",
+                "solution": "Designed multi-agent collaboration framework decomposing tasks into chart understanding, code generation, and debugging optimization stages, using large language models for end-to-end automated generation",
+                "contribution": "Responsible for full-stack code implementation of the entire project, construction of multi-agent architecture, and implementation of multiple validators"
+            }
+        },
+        "interests": {
+            "title": "Research Interests"
+        },
+        "problem": "Problem:",
+        "solution": "Method:",
+        "contribution": "Contribution:",
+        "abstractProblem": "Problem:",
+        "abstractMethod": "Method:",
+        "abstractResult": "Results:",
+        "contributions": {
+            "title": "Key Contributions"
+        },
+        "role": {
+            "title": "My Role"
+        },
+        "links": {
+            "paper": "Paper",
+            "code": "Code",
+            "demo": "Demo"
+        }
+    },
+    "contact": {
+        "form": {
+            "nameLabel": "Name",
+            "namePlaceholder": "Your Name",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Your Email",
+            "messageLabel": "Message",
+            "messagePlaceholder": "Your Message"
+        },
+        "submit": "Send"
+    },
+    "footer": {
+        "copyright": "© 2024 JayTang. All rights reserved."
+    }
+}
